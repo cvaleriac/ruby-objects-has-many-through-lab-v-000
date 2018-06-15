@@ -8,19 +8,16 @@ class Genre
     @@all << self
   end
 
-  def songs
-    self.songs.collect do |song|
-      self.genre
-  end
-end
-
   def self.all
       @@all
   end
 
+  def songs
+    Song.all{|song| song.genre == self}
+end
+
   def artists
-    self.songs.collect do |song|
-      song.artist
+    songs.map{|song| song.artist}
     end
-  end
+
 end

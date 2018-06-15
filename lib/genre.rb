@@ -9,7 +9,7 @@ class Genre
   end
 
   def songs
-    self.songs.collect do |song|
+    self.songs.map do |song|
       self.genre
   end
 

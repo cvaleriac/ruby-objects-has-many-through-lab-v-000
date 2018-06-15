@@ -19,8 +19,7 @@ end
   end
 
   def artists
-    self.songs.collect do |song| 
+    self.songs.collect do |song|
     end
   end
 end
-

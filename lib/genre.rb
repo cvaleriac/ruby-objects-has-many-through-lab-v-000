@@ -9,12 +9,18 @@ class Genre
   end
 
   def songs
-    self.songs.map do |song|
+    self.songs.collect do |song|
       self.genre
   end
+end
 
   def self.all
       @@all
   end
+
+  def artists
+    self.songs.collect do |song| 
+    end
+  end
 end
-end
+
